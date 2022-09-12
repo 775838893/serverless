@@ -1,0 +1,148 @@
+<style type="text/css">.aussenabstand {margin: 0 18.0px;}p, td {font-size: 12.0px;font-family: Arial, Helvetica, sans-serif;margin: 0;color: #000000;}
+
+</style>
+<div class="aym_table_wrap" style="overflow: hidden; display: table; width: 928px; margin: 0px;">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+        <tr>
+            <td colspan="6" width="90%">&nbsp;</td>
+        </tr>
+        <tr>
+            <td>
+                <table border="0" cellpadding="0" cellspacing="0" class="aussenabstand" width="90%">
+                    <tbody>
+                    <tr>
+                        <td align="left" colspan="6" valign="top"><p></p>
+                            <table style="font-family:Microsoft YaHei;border-spacing:.0px 12.0px;font-size:12.0px;"
+                                   border="0" cellpadding="0" cellspacing="0" width="800">
+                                <thead style="font-size:13.0px;">
+                                <tr>
+                                    <td style="font-size:13.0px;">
+                                        <span style="line-height: 28px; color: rgb(37, 43, 58); display: inline-block; font-size: 13px; height: auto;"
+                                              class=" __aliyun_node_has_color">您好 {{ manager }}：</span>
+                                        <br>
+                                        <span style="line-height: 28px; color: rgb(37, 43, 58); display: inline-block; font-size: 13px; height: auto;"
+                                              class=" __aliyun_node_has_color">{{ sms_content }}</span>
+                                    </td>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td style="font-size:12.0px;">
+                                        <br>
+                                        <b style="color:#0d0d0d;" class=" __aliyun_node_has_color">告警级别：</b>
+                                        <span style="color:#252b3a;" class=" __aliyun_node_has_color">{{ alarm_level }}</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table style="font-family:Microsoft YaHei;font-size:12.0px;" border="0"
+                                               cellpadding="0" cellspacing="0">
+                                            <tbody>
+                                            <tr>
+                                                <td style="font-size:12.0px;white-space:nowrap;" valign="top">
+                                                    <b style="color: rgb(13, 13, 13); line-height: 24px; height: auto;"
+                                                       class=" __aliyun_node_has_color">告警对象：</b>
+                                                </td>
+                                                <td style="font-size:12.0px;" valign="top">
+                                                    <span style="color: rgb(37, 43, 58); line-height: 24px; height: auto;"
+                                                          class=" __aliyun_node_has_color">区域：{{ region_id }}</span><br>
+                                                    <span style="color: rgb(37, 43, 58); line-height: 24px; height: auto;"
+                                                          class=" __aliyun_node_has_color">企业项目：{{ ep_name }}</span><br>
+                                                    <span style="color: rgb(37, 43, 58); line-height: 24px; height: auto;"
+                                                          class=" __aliyun_node_has_color">资源类型：{{ dimension_name }}</span><br>
+                                                    <span style="color: rgb(37, 43, 58); line-height: 24px; word-break: break-all; height: auto;"
+                                                          class=" __aliyun_node_has_color">资源名称：{{ resource_name }}</span><br>
+                                                    {% if inner_ip %}
+                                                    <span style="color: rgb(37, 43, 58); line-height: 24px; height: auto;"
+                                                          class=" __aliyun_node_has_color">私网ip：{{ inner_ip }}</span><br>
+                                                    {% endif %}
+
+                                                    {% if public_ip %}
+                                                    <span style="color: rgb(37, 43, 58); line-height: 24px; height: auto;"
+                                                          class=" __aliyun_node_has_color">公网ip：{{ public_ip }}</span><br>
+                                                    {% endif %}
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="font-size:12.0px;" valign="top" width="30%">
+                                        <table style="font-family:Microsoft YaHei;font-size:12.0px;" border="0"
+                                               cellpadding="0" cellspacing="0">
+                                            <tbody>
+                                            <tr>
+                                                <td style="font-size:12.0px;" valign="top">
+                                                    <span style="color:#252b3a;display:inline-block;"
+                                                          class=" __aliyun_node_has_color"></span>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="font-size:12.0px;">
+                                        <b style="color:#0d0d0d;" class=" __aliyun_node_has_color">当前数据：</b>
+                                        <span style="color:#252b3a;" class=" __aliyun_node_has_color">{{ current_data }}</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="font-size:12.0px;">
+                                        <b style="color:#0d0d0d;" class=" __aliyun_node_has_color">告警时间：</b>
+                                        <span style="color:#252b3a;" class=" __aliyun_node_has_color">{{ occour_time }}</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="font-size:12.0px;">
+                                        <br>
+                                        <table style="font-family:Microsoft YaHei;font-size:12.0px;" border="0"
+                                               cellpadding="0" cellspacing="0">
+                                            <tbody>
+                                            <tr>
+                                                <td style="font-size:12.0px;white-space:nowrap;" valign="top">
+                                                    <b style="color: rgb(13, 13, 13); line-height: 24px; height: auto;"
+                                                       class=" __aliyun_node_has_color">告警触发数据：</b><br>
+                                                </td>
+                                                <td style="font-size:12.0px;" valign="top">
+                                                    <table border="0" cellpadding="0" cellspacing="0">
+                                                        <tbody>
+                                                        {% for time, values in occour_data.items() %}
+                                                        <tr>
+                                                            <td style="height: auto;">
+                                                                <div style="color: rgb(37, 43, 58); line-height: 18px; height: auto;"
+                                                                     class=" __aliyun_node_has_color"> {{ time }} {{ metric_name }}={{ values }}
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        {% endfor %}
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="font-size:12.0px;">
+                                        <br>
+                                        <b style="color:#0d0d0d;" class=" __aliyun_node_has_color">触发规则：</b>
+                                        <span style="color:#252b3a;" class=" __aliyun_node_has_color">{{ regulation }}</span>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <p></p>
+                            <p>&nbsp;</p>
+                            <p>本邮件由系统自动发送，请勿直接回复</p><br></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
